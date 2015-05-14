@@ -19,7 +19,9 @@
     "yiisoft/yii": "~1.1"
   },
   "require-dev": {
-    "phpunit/phpunit": "~4.6"
+    "phpunit/phpunit": "~4.6",
+    "fabpot/php-cs-fixer": "~1.8",
+    "satooshi/php-coveralls": "~0.6"
   },
   "autoload": {
     "psr-4": {
