@@ -74,9 +74,11 @@ class GelfLogRoute extends \CLogRoute
                 }
             }
 
-            $gelfMessage->setLevel(($_ = &$this->_levels[$level]) ?: LogLevel::INFO)
+            $gelfMessage
+                ->setLevel(($_ = &$this->_levels[$level]) ?: LogLevel::INFO)
                 ->setTimestamp($timestamp)
-                ->setFacility($category);
+                ->setFacility($category)
+                ->setAdditional('level_name', strtolower($level));
 
             foreach ($this->extra as $key => $val) {
                 if (is_string($key)) {
