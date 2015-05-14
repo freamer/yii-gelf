@@ -6,7 +6,7 @@
 [![Scrutinizer Code Coverage Status](https://img.shields.io/scrutinizer/coverage/g/bankiru/yii-gelf.svg?style=flat-square)](https://scrutinizer-ci.com/g/bankiru/yii-gelf/)
 [![Coveralls Code Coverage Status](https://img.shields.io/coveralls/bankiru/yii-gelf.svg?style=flat-square)](https://coveralls.io/r/bankiru/yii-gelf)
 [![Scrutinizer Quality Score](https://img.shields.io/scrutinizer/g/bankiru/yii-gelf.svg?style=flat-square)](https://scrutinizer-ci.com/g/bankiru/yii-gelf/)
-[![SensioLabsInsight](https://img.shields.io/sensiolabs/i/8460de87-ad48-4b76-b21d-348837793984.svg?style=flat-square)](https://insight.sensiolabs.com/projects/8460de87-ad48-4b76-b21d-348837793984)
+[![SensioLabsInsight](https://img.shields.io/sensiolabs/i/ef21e48a-3142-4981-97e6-1205a0722be3.svg?style=flat-square)](https://insight.sensiolabs.com/projects/ef21e48a-3142-4981-97e6-1205a0722be3)
 [![Dependency Status](https://www.versioneye.com/user/projects/5554e8ef774ff25e270000f8/badge.svg?style=flat-square)](https://www.versioneye.com/user/projects/5554e8ef774ff25e270000f8)
 [![HHVM Status](https://img.shields.io/hhvm/bankiru/yii-gelf.svg?style=flat-square)](http://hhvm.h4cc.de/package/bankiru/yii-gelf)
 [![License](https://img.shields.io/packagist/l/bankiru/yii-gelf.svg?style=flat-square)](https://packagist.org/packages/bankiru/yii-gelf)
