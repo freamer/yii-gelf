@@ -1,6 +1,9 @@
 {
   "name": "bankiru/yii-gelf",
+  "type": "yii-extension",
   "description": "Graylog2 log route for Yii",
+  "keywords": ["yii", "extension", "log", "log route", "graylog", "graylog2", "gelf"],
+  "homepage": "https://github.com/bankiru/yii-gelf",
   "minimum-stability": "stable",
   "license": "MIT",
   "authors": [
