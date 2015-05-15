@@ -28,4 +28,33 @@ Releases of Graylog2 log route for Yii client are available on [Github](https://
 
 ## Documentation
 
-@todo write docs
+To enable logging to Graylog2 you should add log route to Yii config. For example:
+
+```
+return [
+    // ...
+    'components' => [
+        // ...
+        'log' => [
+            // ...
+            'routes' => [
+                // ...
+                'graylog2' => [
+                    'class'     => 'Bankiru\\Yii\\Logging\\Graylog2\\GelfLogRoute',
+                    'levels'    => 'info,warning,error',
+                    'host'      => '127.0.0.1',
+                    'port'      => 12201,
+                    // 'chunkSize' => Gelf\Transport\UdpTransport::CHUNK_SIZE_LAN,
+                    'extra'     => [
+                        'some_extra_field' => 'which will be added to "additionals"'
+                    ],
+                ],
+                // ...
+            ],
+            // ...        
+        ],
+        // ...
+    ],
+    // ...
+];
+```
