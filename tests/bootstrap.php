@@ -11,4 +11,7 @@ if (!file_exists($filename)) {
     echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" . PHP_EOL . PHP_EOL;
     $filename = __DIR__ .'/../autoload.php';
 }
-require $filename;
+$classLoader = require $filename;
+
+// enable Yii autoloader
+Yii::registerAutoloader([$classLoader, 'loadClass']);
