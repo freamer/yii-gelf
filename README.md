@@ -17,7 +17,7 @@
 
 ```
 "require": {
-  "bankiru/yii-gelf": "~0.1"
+  "bankiru/yii-gelf": "~1.0"
 }
 ```
 
