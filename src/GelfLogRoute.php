@@ -1,4 +1,5 @@
 <?php
+//test
 namespace Freamer\Yii\Logging\Graylog2;
 
 use Gelf;
