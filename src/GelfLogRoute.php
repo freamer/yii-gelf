@@ -1,5 +1,5 @@
 <?php
-namespace Bankiru\Yii\Logging\Graylog2;
+namespace Freamer\Yii\Logging\Graylog2;
 
 use Gelf;
 use Psr\Log\LogLevel;
