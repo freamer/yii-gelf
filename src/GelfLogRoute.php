@@ -53,8 +53,45 @@ class GelfLogRoute extends \CLogRoute
     {
         $publisher = new Gelf\Publisher($this->transport);
 
+        $messageBuffer = '';
+        $bufferCount = 0;
+        ///print 'processLog start' .var_export($logs, true)."\r\n";
         foreach ($logs as $logItem) {
+
             list($message, $level, $category, $timestamp) = $logItem;
+
+            $nextItem = next($logs);
+
+            /*
+                we merge log if they are of same kind close to each other
+            */
+            $flush = true;
+            if( $logItem[1] == $nextItem[1] && $level == 'info' )
+            {
+                $flush = false;               
+            }
+
+            if( $bufferCount > 30 )
+                $flush = true;
+
+            /*
+                If buffer should not be flushed right away, let next log take it
+
+                else print current log message +  buffer
+            */
+            if( !$flush )
+            {
+                $messageBuffer .= $message."\r\n";
+                $bufferCount++;
+                continue;
+            } 
+            else
+            {
+                $message = $messageBuffer.$message;
+                $messageBuffer = '';
+                $bufferCount = 0;
+            }
+
             $gelfMessage = new Gelf\Message;
 
             if (is_string($message)) {
@@ -100,6 +137,8 @@ class GelfLogRoute extends \CLogRoute
 
                 $gelfMessage->setAdditional('trace', implode("\n", $traces));
             }
+
+            
 
             // Publishing message
             $publisher->publish($gelfMessage);
