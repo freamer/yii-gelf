@@ -1,5 +1,5 @@
 {
-  "name": "bankiru/yii-gelf",
+  "name": "freamer/yii-gelf",
   "type": "yii-extension",
   "description": "Graylog2 log route for Yii",
   "keywords": ["yii", "extension", "log", "log route", "graylog", "graylog2", "gelf"],
@@ -25,12 +25,12 @@
   },
   "autoload": {
     "psr-4": {
-      "Bankiru\\Yii\\Logging\\Graylog2\\": "src"
+      "Freamer\\Yii\\Logging\\Graylog2\\": "src"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "Bankiru\\Yii\\Logging\\Graylog2\\": "tests"
+      "Freamer\\Yii\\Logging\\Graylog2\\": "tests"
     }
   }
 }
