@@ -63,10 +63,10 @@ class GelfLogRoute extends \CLogRoute
             $nextItem = next($logs);
 
             /*
-                we merge log if they are of same kind close to each other
+                we merge log if they are of same kind (flow type atm only) and close to each other in array
             */
             $flush = true;
-            if( $logItem[1] == $nextItem[1] && $level == 'info' )
+            if( $logItem[1] == $nextItem[1] && $level == 'flow' )
             {
                 $flush = false;               
             }
@@ -77,7 +77,7 @@ class GelfLogRoute extends \CLogRoute
             /*
                 If buffer should not be flushed right away, let next log take it
 
-                else print current log message +  buffer
+                else flush current log message +  buffer
             */
             if( !$flush )
             {
